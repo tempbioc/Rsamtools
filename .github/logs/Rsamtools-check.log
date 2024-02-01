@@ -96,7 +96,7 @@ See 'Writing portable packages' in the 'Writing R Extensions' manual.
 * checking examples ... OK
 Examples with CPU (user + system) or elapsed time > 5s
          user system elapsed
-pileup 21.271  0.048  21.332
+pileup 21.306  0.035  21.353
 * checking for unstated dependencies in 'tests' ... OK
 * checking tests ...
   Running 'Rsamtools_unit_tests.R'
