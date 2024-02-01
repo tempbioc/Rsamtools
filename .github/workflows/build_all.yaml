@@ -17,9 +17,9 @@ jobs:
         config:
           #- {os: macOS-latest,   r: 'release'}
           #- {os: windows-latest, r: 'release'}
-          - {type: 'test', os: 'ubuntu-latest', container: 'ghcr.io/bioconductor/bioconductor_salt:22.04-bioc-3.18', user: 'root'}
-          - {type: 'binary-build', os: 'ubuntu-latest', container: 'bioconductor/bioconductor:3.18', user: 'root'}
-          - {type: 'deb-build', os: 'ubuntu-latest', container: 'ghcr.io/bioconductor/bioc2u-builder:jammy-bioc-3.18-r-4.3.2', user: 'root'}
+          - {type: 'test', os: 'ubuntu-latest', container: 'ghcr.io/bioconductor/bioconductor_salt:devel-jammy-bioc-3.19-r-4.4.0', user: 'root'}
+          #- {type: 'binary-build', os: 'ubuntu-latest', container: 'bioconductor/bioconductor:3.18', user: 'root'}
+          #- {type: 'deb-build', os: 'ubuntu-latest', container: 'ghcr.io/bioconductor/bioc2u-builder:jammy-bioc-3.18-r-4.3.2', user: 'root'}
     steps:
       - uses: actions/checkout@v4
 
