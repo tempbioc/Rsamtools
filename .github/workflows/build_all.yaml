@@ -41,7 +41,7 @@ jobs:
           cd ..
           su biocbuild
           BBS_R_PATH=$(echo /home/biocbuild/bbs-*-bioc/R)
-          $BBS_R_PATH/bin/Rscript -e 'BiocManager::install("${{steps.common.outputs.pkg}}", dependencies=TRUE, force=TRUE, type="source")'
+          $BBS_R_PATH/bin/Rscript -e 'BiocManager::install("${{steps.common.outputs.pkg}}", Ncpus=2, dependencies=TRUE, force=TRUE, type="source")'
           $BBS_R_PATH/bin/R CMD INSTALL ${{steps.common.outputs.pkg}} &> ${{steps.common.outputs.logdir}}/${{steps.common.outputs.pkg}}-install.log
 
           cat ${{steps.common.outputs.logdir}}/${{steps.common.outputs.pkg}}-install.log
